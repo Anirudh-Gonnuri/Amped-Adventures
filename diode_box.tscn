@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cd8kio5a3x80d"]
+
+[ext_resource type="Script" path="res://scenes/diode_box.gd" id="1_scbum"]
+[ext_resource type="Texture2D" uid="uid://cputxm6vffsrd" path="res://assets/game_elements/diode holder.png" id="2_hc8p1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upec5"]
+atlas = ExtResource("2_hc8p1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_didmp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upec5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjael"]
+size = Vector2(32, 27)
+
+[node name="diode_box" type="Area2D"]
+position = Vector2(2855, 2213)
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_scbum")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2.38419e-07, 3.8147e-06)
+scale = Vector2(1.6, 1.6)
+sprite_frames = SubResource("SpriteFrames_didmp")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_jjael")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

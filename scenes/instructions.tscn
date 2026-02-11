@@ -1,0 +1,292 @@
+[gd_scene load_steps=24 format=3 uid="uid://bwocjixpokl1b"]
+
+[ext_resource type="Script" path="res://scenes/instructions.gd" id="1_phebr"]
+[ext_resource type="Texture2D" uid="uid://c5fj00obw3nc2" path="res://ui/instructions/UI books & more.png" id="2_5d5e5"]
+[ext_resource type="Texture2D" uid="uid://cgyaseqi2bj1k" path="res://ui/instructions/S.png" id="2_5mcos"]
+[ext_resource type="Texture2D" uid="uid://cq8ricv7j3ga4" path="res://ui/instructions/W.png" id="2_66646"]
+[ext_resource type="Texture2D" uid="uid://6mbahqxqqp33" path="res://ui/instructions/A.png" id="4_ve6xa"]
+[ext_resource type="Texture2D" uid="uid://16ckim2stbcu" path="res://ui/instructions/D.png" id="5_xfmy4"]
+[ext_resource type="FontFile" uid="uid://bmxbdvi17ukdi" path="res://ui/dogicapixel.ttf" id="6_yk0ej"]
+[ext_resource type="Texture2D" uid="uid://0vpfvk1mcykb" path="res://ui/instructions/E.png" id="8_xaq5d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kss7b"]
+atlas = ExtResource("2_66646")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfkol"]
+atlas = ExtResource("2_66646")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yrfy5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kss7b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfkol")
+}],
+"loop": false,
+"name": &"pressed",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13jqr"]
+atlas = ExtResource("2_5mcos")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_coytx"]
+atlas = ExtResource("2_5mcos")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nf4bp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13jqr")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_coytx")
+}],
+"loop": false,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8234e"]
+atlas = ExtResource("4_ve6xa")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrnbp"]
+atlas = ExtResource("4_ve6xa")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j7idm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8234e")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrnbp")
+}],
+"loop": false,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26l0y"]
+atlas = ExtResource("5_xfmy4")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynwj2"]
+atlas = ExtResource("5_xfmy4")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ccbo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26l0y")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynwj2")
+}],
+"loop": false,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0o6b"]
+atlas = ExtResource("8_xaq5d")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0b1xc"]
+atlas = ExtResource("8_xaq5d")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_okx84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0o6b")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0b1xc")
+}],
+"loop": false,
+"name": &"pressed",
+"speed": 5.0
+}]
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 130.0
+offset_top = -171.0
+offset_right = 130.0
+offset_bottom = -171.0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_phebr")
+
+[node name="Big" type="TextureRect" parent="." groups=["movement"]]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -92.0
+offset_top = -71.0
+offset_right = 271.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_5d5e5")
+
+[node name="LoreBg" type="TextureRect" parent="." groups=["lore"]]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -48.0
+offset_right = 995.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_5d5e5")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+
+[node name="Movement" type="Label" parent="." groups=["movement"]]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = -35.0
+offset_right = 235.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.647059, 0.470588, 0.333333, 1)
+theme_override_constants/line_spacing = 16
+theme_override_fonts/font = ExtResource("6_yk0ej")
+theme_override_font_sizes/font_size = 21
+text = "USE 
+WASD KEYS 
+TO MOVE"
+horizontal_alignment = 1
+
+[node name="Attack" type="Label" parent="." groups=["attack"]]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 186.0
+offset_right = 699.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(0.647059, 0.470588, 0.333333, 1)
+theme_override_constants/line_spacing = 16
+theme_override_fonts/font = ExtResource("6_yk0ej")
+theme_override_font_sizes/font_size = 37
+text = "Press     to Attack"
+horizontal_alignment = 1
+
+[node name="Lore" type="Label" parent="." groups=["lore"]]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 38.0
+offset_top = -8.0
+offset_right = 866.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0.647059, 0.470588, 0.333333, 1)
+theme_override_constants/line_spacing = 16
+theme_override_fonts/font = ExtResource("6_yk0ej")
+theme_override_font_sizes/font_size = 21
+text = "Enemy is ahead!! Proceed with caution. 
+You can eliminate by attacking them from behind
+ but be carefull it will kill you if it touches you."
+autowrap_mode = 1
+
+[node name="WKey" type="AnimatedSprite2D" parent="." groups=["movement"]]
+visible = false
+position = Vector2(21, 42)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_yrfy5")
+
+[node name="SKey" type="AnimatedSprite2D" parent="." groups=["movement"]]
+visible = false
+position = Vector2(21, 87.0001)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_nf4bp")
+
+[node name="AKey" type="AnimatedSprite2D" parent="." groups=["movement"]]
+visible = false
+position = Vector2(-25, 87.0001)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_j7idm")
+
+[node name="DKey" type="AnimatedSprite2D" parent="." groups=["movement"]]
+visible = false
+position = Vector2(68, 87)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_0ccbo")
+
+[node name="EKey" type="AnimatedSprite2D" parent="." groups=["attack"]]
+visible = false
+position = Vector2(387, 18)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_okx84")
+
+[node name="Continue" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 496.0
+offset_top = 103.0
+offset_right = 871.0
+offset_bottom = 126.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.647059, 0.470588, 0.333333, 1)
+theme_override_fonts/font = ExtResource("6_yk0ej")
+theme_override_font_sizes/font_size = 20
+text = " "
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

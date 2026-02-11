@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://yvxfh45i355o"]
+
+[ext_resource type="Script" path="res://scenes/start_screen.gd" id="1_y4dkj"]
+[ext_resource type="Texture2D" uid="uid://bmgq7m8a8k7n" path="res://assets/1744160948213.png" id="2_xnal5"]
+
+[node name="Node" type="Node"]
+
+[node name="StartScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y4dkj")
+
+[node name="Background" type="ColorRect" parent="StartScreen"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47
+anchor_top = 0.47
+anchor_right = 0.47
+anchor_bottom = 0.47
+offset_left = -20.44
+offset_top = 99.44
+offset_right = 20.56
+offset_bottom = 165.44
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+alignment = 1
+
+[node name="Play" type="Button" parent="StartScreen/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play"
+icon_alignment = 1
+
+[node name="Exit" type="Button" parent="StartScreen/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+text = "Exit"
+
+[node name="Logo" type="TextureRect" parent="StartScreen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -176.0
+offset_top = 46.0
+offset_right = 162.0
+offset_bottom = 390.0
+grow_horizontal = 2
+texture = ExtResource("2_xnal5")
+expand_mode = 1
+stretch_mode = 5

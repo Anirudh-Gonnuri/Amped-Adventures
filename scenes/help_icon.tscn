@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjtha2r63xcx2"]
+
+[ext_resource type="Script" path="res://scenes/help_icon.gd" id="1_fq6if"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_254vt"]
+size = Vector2(28.5, 29)
+
+[node name="HelpIcon" type="Area2D"]
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_fq6if")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_254vt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

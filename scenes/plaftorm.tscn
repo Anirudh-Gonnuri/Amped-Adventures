@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdg6d6yibrliq"]
+
+[ext_resource type="Script" path="res://scenes/plaftorm.gd" id="1_8j7c7"]
+[ext_resource type="Texture2D" uid="uid://s0e6tkdmbiw1" path="res://moving tile.png" id="2_8af76"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1iit"]
+size = Vector2(94, 10)
+
+[node name="plaftorm" type="CharacterBody2D"]
+script = ExtResource("1_8j7c7")
+speed = 70.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(48, 21)
+scale = Vector2(2.875, 2)
+texture = ExtResource("2_8af76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(48, 20)
+shape = SubResource("RectangleShape2D_v1iit")

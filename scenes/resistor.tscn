@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv7ny17vfm6ch"]
+
+[ext_resource type="Script" path="res://scenes/resistor.gd" id="1_kdik3"]
+[ext_resource type="Texture2D" uid="uid://cgplbhn6805o2" path="res://assets/game_elements/3.3k.png" id="2_h2eia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sniof"]
+size = Vector2(53, 17)
+
+[node name="resistor" type="Area2D"]
+position = Vector2(20, 1)
+collision_layer = 9
+collision_mask = 3
+script = ExtResource("1_kdik3")
+
+[node name="Sprite2d" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("2_h2eia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.1996, -2.32031)
+shape = SubResource("RectangleShape2D_sniof")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

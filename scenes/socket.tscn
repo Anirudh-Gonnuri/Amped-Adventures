@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://nmbyqhtkfyi2"]
+
+[ext_resource type="Script" path="res://scenes/socket.gd" id="1_gxgac"]
+[ext_resource type="Texture2D" uid="uid://cu03ciwdcqk75" path="res://assets/game_elements/pixil-frame-0 (4).png" id="2_itej0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpeph"]
+
+[node name="socket" type="Area2D"]
+position = Vector2(1674.23, 1095.72)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_gxgac")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_itej0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.15389, 6.85531)
+shape = SubResource("RectangleShape2D_xpeph")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

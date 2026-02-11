@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvch1qnkl1rw6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fmwoh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ask86"]
+size = Vector2(441, 20)
+
+[node name="deadbox" type="Area2D"]
+position = Vector2(942, 1699)
+collision_layer = 16
+collision_mask = 3
+
+[node name="deadbox" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fmwoh")
+
+[node name="col" type="CollisionShape2D" parent="."]
+position = Vector2(13.5, 0)
+shape = SubResource("RectangleShape2D_ask86")
